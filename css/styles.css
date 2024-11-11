@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Definindo variáveis para cores */
+:root {
+  --dark-bg: #121212;
+  --primary-color: #6a4eeb;  
+  --highlight-color: #ffcc00; 
+  --white: #ffffff;
+  --font-family: 'Montserrat', sans-serif;
+}
+
+/* Resetando padrões do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Definindo a fonte principal */
+body {
+  font-family: var(--font-family);
+  background-color: var(--dark-bg);
+  color: var(--white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  /* Efeito de fundo com formas geométricas animadas 
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(37, 36, 41, 0.623) 20%, transparent 20%),
+    radial-gradient(circle at 90% 30%, rgba(255, 204, 0, 0.212) 20%, transparent 20%);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  animation: background-animation 10s linear infinite;
+  */
+}
+
+/* Animação do fundo */
+@keyframes background-animation {
+  0% {
+    background-position: 0 0, 25px 25px;
+  }
+  50% {
+    background-position: 50px 50px, 30px 30px;
+  }
+  100% {
+    background-position: 100px 100px, 50px 50px;
+  }
+}
+
+/* Estilos do perfil */
+.profile {
+  margin-top: 20px;
+}
+
+.profile__photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+}
+
+.profile__name {
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.profile__title {
+  font-size: 1.1em;
+  color: var(--highlight-color);
+  margin-top: 5px;
+}
+
+/* Estilos dos links das redes sociais */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 30px;
+  width: 200px;
+  margin: 0 auto;
+  transition: background-color 0.3s;
+}
+
+.social-link i {
+  margin-right: 10px;
+}
+
+.social-link:hover {
+  background-color: var(--highlight-color);
+}
+
+/* Estilo do rodapé fixo */
+footer {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1em;
+  color: var(--white);
+  text-align: center;
+  z-index: 10;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .profile__photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile__name {
+    font-size: 1.2em;
+  }
+
+  .profile__title {
+    font-size: 1em;
+  }
+
+  .social-link {
+    width: 80%;
+  }
+}
