@@ -24,38 +24,21 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
   position: relative;
-
-  /* Efeito de fundo com formas geométricas animadas 
-  background-image: 
-    radial-gradient(circle at 10% 10%, rgba(37, 36, 41, 0.623) 20%, transparent 20%),
-    radial-gradient(circle at 90% 30%, rgba(255, 204, 0, 0.212) 20%, transparent 20%);
-  background-size: 50px 50px;
-  background-position: 0 0, 25px 25px;
-  animation: background-animation 10s linear infinite;
-  */
-}
-
-/* Animação do fundo */
-@keyframes background-animation {
-  0% {
-    background-position: 0 0, 25px 25px;
-  }
-  50% {
-    background-position: 50px 50px, 30px 30px;
-  }
-  100% {
-    background-position: 100px 100px, 50px 50px;
-  }
 }
 
 /* Estilos do perfil */
-.profile {
-  margin-top: 20px;
+.profile-container {
+  margin-top: 50px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 80vh; 
+  overflow-y: auto; 
+  padding: 10px;
 }
 
 .profile__photo {
